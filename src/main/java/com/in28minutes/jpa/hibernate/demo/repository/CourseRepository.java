@@ -49,13 +49,10 @@ public class CourseRepository {
 		
 //		em.detach(course1);
 //		em.detach(course2);		
-		em.clear();
+//		em.clear();
 		
 		course1.setName("WebServices in 100 Steps - Updated");
-		em.flush();
-		
-		
 		course2.setName("AngularJS in 100 Steps - Updated");
-		em.flush();	
+		em.refresh(course1);	
 	}
 }
