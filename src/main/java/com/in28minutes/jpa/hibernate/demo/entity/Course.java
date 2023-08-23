@@ -9,8 +9,15 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.NamedQueries;
+import jakarta.persistence.NamedQuery;
 
 @Entity
+@NamedQueries(value = {
+		@NamedQuery(name="query_get_all_courses", query="select c from Course c"),
+		@NamedQuery(name="query_get_50_step_courses", query="Select c from Course c where name like '%50%'")
+})
+//@NamedQuery(name="query_get_all_courses", query="select c from Course c")
 public class Course {
 	
 	@Id
