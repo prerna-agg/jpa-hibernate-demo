@@ -1,3 +1,3 @@
-insert into Course(id, name) values(10001, 'JPA in 50 Steps');
-insert into Course(id, name) values(10002, 'Spring in 50 Steps');
-insert into Course(id, name) values(10003, 'AWS in 50 Steps');
+insert into Course(id, name, created_date, last_updated_date) values(10001, 'JPA in 50 Steps', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+insert into Course(id, name, created_date, last_updated_date) values(10002, 'Spring in 50 Steps', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+insert into Course(id, name, created_date, last_updated_date) values(10003, 'AWS in 50 Steps', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());

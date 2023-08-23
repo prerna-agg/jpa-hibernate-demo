@@ -23,15 +23,7 @@ class JPQLTest {
 	
 	@PersistenceContext
 	EntityManager em;
-	
-
-//	@Test
-//	public void test_basic() {
-//		
-//		List<CourseOutput> resultList = (List<CourseOutput>)em.createQuery("Select c.name,c.id from Course c").getResultList();
-//		logger.info("Select c from Course c -> {}", resultList);
-//	}
-	
+		
 	@Test
 	public void jpql_basic() {
 		

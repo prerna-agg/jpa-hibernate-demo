@@ -29,7 +29,7 @@ public class DemoApplication implements CommandLineRunner{
 //		logger.info("Course with id 10001 -> {}", course);
 		
 //		repository.deleteById(10001L);
-//		repository.playWithEntityManager();
+		repository.playWithEntityManager();
 	}
 
 }
