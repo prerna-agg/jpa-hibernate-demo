@@ -1,5 +1,7 @@
 package com.in28minutes.jpa.hibernate.demo.repository;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
@@ -8,6 +10,7 @@ import com.in28minutes.jpa.hibernate.demo.entity.Course;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.Query;
 import jakarta.transaction.Transactional;
 
 @Repository
@@ -54,5 +57,13 @@ public class CourseRepository {
 		course1.setName("WebServices in 100 Steps - Updated");
 		course2.setName("AngularJS in 100 Steps - Updated");
 		em.refresh(course1);	
+	}
+	
+	public void playWithEntityManagerAndNativeQuery() {
+		Query query = em.createNativeQuery("SELECT * from Course where id = 10001", Course.class);
+		List<Course> resultList = query.getResultList();
+		logger.info("SELECT * from Course -> {}", resultList);
+		resultList.get(0).setName("JPA in 50 Steps - Updated");
+		
 	}
 }

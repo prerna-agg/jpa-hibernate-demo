@@ -30,6 +30,7 @@ public class DemoApplication implements CommandLineRunner{
 		
 //		repository.deleteById(10001L);
 //		repository.playWithEntityManager();
+//		repository.playWithEntityManagerAndNativeQuery();
 	}
 
 }
